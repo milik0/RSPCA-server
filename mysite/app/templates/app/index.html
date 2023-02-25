@@ -1,0 +1,9 @@
+{% if latest_animal_list %}
+    <ul>
+    {% for animal in latest_animal_list %}
+    <li><a href="{% url 'app:detail' animal.id %}">{{ animal.species}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No animals are available.</p>
+{% endif %}
