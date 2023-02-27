@@ -1,12 +1,12 @@
-## MyRSPCA
+# MyRSPCA
 MyRSPCA is a CRUD Django project that enables different RSPCAs to create accounts and add the animals they rescued to the server, so that people can adopt them. The project uses MySQL as the database management system.
 
-# Requirements
+## Requirements
 Python 3.6 or higher
 Django 3.1.7 or higher
 MySQL server 5.7 or higher
 
-# Installation
+## Installation
 
 1. Clone the repository to your local machine.
 	$ git clone https://github.com/your_username/MyRSPCA.git
@@ -42,7 +42,7 @@ DATABASES = {
 7. Run the server.
 	$ python manage.py runserver
 
-# Usage
+## Usage
 Open your web browser and go to http://localhost:8000/.
 
 You can add the animals that you rescued by clicking on the "Add Animal" button.
