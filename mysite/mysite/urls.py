@@ -21,10 +21,19 @@ from django.conf import settings
 admin.site.site_url = 'http://127.0.0.1:8000/app'  # Removes the 'View Site' link
 admin.site.site_header = 'Check Website'
 
+"""
+The urls.py file defines the different urls that are available in the app
+    * admin: The admin page of the app (the page that allows the user to manage the app)
+    * app: The app page of the app (the page that allows the user to use the app)
+"""
 urlpatterns = [
     path('', include('app.urls')),
     path('admin/', admin.site.urls),
 
 ]
-
+"""
+The static() helper function allows you to serve static files during development
+    * settings.MEDIA_URL: The url to the media folder
+    * document_root: The root of the media folder
+"""
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

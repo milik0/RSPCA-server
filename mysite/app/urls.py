@@ -4,6 +4,13 @@ from . import views
 from django.conf.urls.static import static
 from django.conf import settings
 
+"""
+The urls.py file defines the different urls that are available in the app
+    * index: The index page of the app (the page that lists all the animals : Read)
+    * edit: The edit page of the app (the page that allows the user to edit an animal : Update)
+    * create: The create page of the app (the page that allows the user to create an animal : Create)
+    * delete: The delete page of the app (the page that allows the user to delete an animal : Delete)
+"""
 app_name = 'app'
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
