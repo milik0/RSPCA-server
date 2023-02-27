@@ -10,7 +10,7 @@ MySQL server 5.7 or higher
 
 1. Clone the repository to your local machine.
 ```shell
-git clone https://github.com/your_username/MyRSPCA.git
+git clone https://github.com/milik0/RSPCA-server.git
 ```
 
 2. Create a virtual environment and activate it.
