@@ -9,7 +9,9 @@ MySQL server 5.7 or higher
 ## Installation
 
 1. Clone the repository to your local machine.
-	$ git clone https://github.com/your_username/MyRSPCA.git
+```shell
+git clone https://github.com/your_username/MyRSPCA.git
+```
 
 2. Create a virtual environment and activate it.
 	$ python3 -m venv env
