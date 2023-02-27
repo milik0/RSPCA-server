@@ -24,7 +24,7 @@ MySQL server 5.7 or higher
 
 5. Set up the database settings in settings.py.
 
-python:
+```python
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -34,7 +34,7 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '3306',
     }
-}
+}```
 
 6. Migrate the database.
 	$ python3 manage.py migrate
