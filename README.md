@@ -56,7 +56,8 @@ python3 manage.py runserver
 ```
 
 ## Usage
-- Open your web browser and go to http://localhost:8000/.
+- Open your web browser and go to http://localhost:8000/. You will find the following web page.
+![Alt text](mysite/app/static/app/images/home_page.png?raw=true "Home Page")
 
 - You can add the animals that you rescued by clicking on the "Add Animal" button.
 
