@@ -14,15 +14,21 @@ git clone https://github.com/your_username/MyRSPCA.git
 ```
 
 2. Create a virtual environment and activate it.
-	$ python3 -m venv env
-	$ source env/bin/activate
+```shell
+python3 -m venv env
+source env/bin/activate
+```
 
 3. Install the required packages.
-	$ pip install -r requirements.txt
+```shell
+pip install -r requirements.txt
+```
 
 4. Create a MySQL database for the project.
-	$ mysql -u root -p
-	$ create database myrspca
+```shell
+mysql -u root -p
+create database myrspca
+```
 
 5. Set up the database settings in settings.py.
 
@@ -40,10 +46,14 @@ DATABASES = {
 ```
 
 6. Migrate the database.
-	$ python3 manage.py migrate
+```shell
+python3 manage.py migrate
+```
 
 7. Run the server.
-	$ python manage.py runserver
+```shell
+python manage.py runserver
+```
 
 ## Usage
 Open your web browser and go to http://localhost:8000/.
