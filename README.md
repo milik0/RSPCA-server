@@ -52,17 +52,17 @@ python3 manage.py migrate
 
 7. Run the server.
 ```shell
-python manage.py runserver
+python3 manage.py runserver
 ```
 
 ## Usage
-Open your web browser and go to http://localhost:8000/.
+- Open your web browser and go to http://localhost:8000/.
 
-You can add the animals that you rescued by clicking on the "Add Animal" button.
+- You can add the animals that you rescued by clicking on the "Add Animal" button.
 
-You can view, edit, and delete the animals that you added by clicking on the "My Animals" link.
+- You can view, edit, and delete the animals that you added by clicking on the "My Animals" link.
 
-People who want to adopt the animals can view them by clicking on the "Adopt" link.
+- People who want to adopt the animals can view them by clicking on the "Adopt" link.
 
 
 
