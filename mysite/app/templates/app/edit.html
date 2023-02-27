@@ -1,0 +1,11 @@
+{% load static %}
+{% block content %}
+    <h1>Edit Item</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Update">
+    </form>
+    <a href="{% url 'app:delete' animal.id %}">Delete</a>
+    <a href="{% url 'app:index' %}">Back to List</a>
+{% endblock %}

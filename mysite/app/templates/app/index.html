@@ -1,11 +1,11 @@
 {% load static %}
 
-<link rel="stylesheet" href="{% static 'polls/style.css' %}">
+<link rel="stylesheet" href="{% static 'app/style.css' %}">
 
 {% if latest_animal_list %}
     <ul>
     {% for animal in latest_animal_list %}
-    <li><a href="{% url 'app:detail' animal.id %}">{{ animal.species}}</a></li>
+    <li><a href="{% url 'app:edit' animal.id %}">{{ animal.name}}</a></li>
     {% endfor %}
     </ul>
 {% else %}

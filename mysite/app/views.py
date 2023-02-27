@@ -5,6 +5,7 @@ from django.views import generic
 from django.utils import timezone
 
 from .models import Animal
+from .forms import AnimalForm
 
 
 class IndexView(generic.ListView):
@@ -13,16 +14,27 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         """Return the last five published animals."""
-        return
-    Animal.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')[:5]
+        return Animal.objects.order_by('-pub_date')[:5]
+    #Animal.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')[:5]
 
-
-class DetailView(generic.DetailView):
+class AnimalView(generic.CreateView):
     model = Animal
+    form_class = AnimalForm
     template_name = 'app/detail.html'
-    def get_queryset(self):
-        """Excludes any animals that aren't published yet"""
-        return Animal.objects.filter(pub_date__lte=timezone.now())
+    success_url = '../'
+
+
+class EditAnimalView(generic.UpdateView):
+    model = Animal
+    form_class = AnimalForm
+    template_name = 'app/edit.html'
+    success_url = '../'
+
+class DeleteAnimalView(generic.DeleteView):
+    model = Animal
+    template_name = 'app/delete.html'
+    success_url = '../../'
 
 def choose(request, animal_id):
-    return HttpResponse("You're choosing animal %s." % animal_id)
+    return
+#    return HttpResponse("You're choosing animal %s." % animal_id)

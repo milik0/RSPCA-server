@@ -1,8 +1,7 @@
-<form action="{% url 'app:choose' animal.id %}" method="post">
-{% csrf_token %}
-<fieldset>
-    <legend><h1>{{ animal.species }}</h1></legend>
-    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-</fieldset>
-<input type="submit" value="Animal">
+<legend><h1>{{ animal.species }}</h1></legend>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+<form action="{% url 'app:create' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+<input type="submit" value="Create">
 </form>
