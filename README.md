@@ -34,7 +34,8 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '3306',
     }
-}```
+}
+```
 
 6. Migrate the database.
 	$ python3 manage.py migrate
