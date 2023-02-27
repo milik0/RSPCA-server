@@ -1,7 +1,40 @@
+header.theme-light { background-color: white }
+header.theme-light .badge { color: var(--sky-300) }
+header.theme-light h1 { color: var(--sky-500) }
+header.theme-light h2 { color: var(--slate-300) }
+
 li a {
     color: green;
 }
 
-body {
-    background: white url("images/background.png") no-repeat;
+.section-selector-1 .col-4 { overflow: visible }
+
+.linkbutton .linkbuttonclick,
+.linkbutton .linkbuttonclick:hover,
+.linkbutton .linkbuttonclick:active {
+    color: #a26c00;
+    text-decoration: none;
+}
+
+
+.linkbutton .linkbuttonclick{
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #a26c00;
+    text-decoration: none;
+}
+.linkbutton .linkbuttonclick:hover{
+    color: #a26c00;
+    text-decoration: none;
+}
+
+.section-selector-1 .col-4 { overflow: visible }
+
+.img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
 }

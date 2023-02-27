@@ -1,13 +1,129 @@
-{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khaled Mili | RSPCA-Server | MyRSPCA</title>
+    <meta name="description" content="Dublin's finest smoothie store. Offering tasty alternatives to sugary and unhealthy snacks for busy, on-the-go, on-trend professionals.">
 
-<link rel="stylesheet" href="{% static 'app/style.css' %}">
+	<!-- Preload large image -->
+    <link rel="preload" href="../../static/app/images/background.png" as="image">
 
-{% if latest_animal_list %}
-    <ul>
-    {% for animal in latest_animal_list %}
-    <li><a href="{% url 'app:edit' animal.id %}">{{ animal.name}}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No animals are available.</p>
-{% endif %}
+	<!-- Stylesheets -->
+    <link rel="stylesheet" href="https://lunevedy.com/assets/2.0/css/lunevedy.min.css" />
+    <link rel="stylesheet" href="../../static/app/style.css" />
+
+	<!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- menu and 'hero block' header -->
+    
+
+    
+
+    <!-- header starts here -->
+
+    <header class="theme-light text-center-desktop text-center-mobile">
+
+        <figure>
+            <img src="../../static/app/images/background.png" alt="Placeholder image">
+        </figure>
+        <div class="container-btn">
+			<a href="create/" class="btn btn-solid btn-pill"><span>Add Animal</span></a><a href="#" class="btn btn-outline btn-pill"><i class="fas fa-arrow-right"></i><span>About us</span></a>
+		</div>
+    </header>
+	<!-- header ends here -->
+
+
+
+
+    <!-- main content with sections -->
+    <main>
+
+	<!-- section starts here -->
+    <section class="theme-light section-selector-1"><div class="col-1 text-center w-820px"><h2>Adopt Now !</h2></div>
+    <!-- Begin four-column flexbox grid -->
+    <div class="flex-cols-4 mobile-col-2 text-center">
+
+        <div class="col-4">
+            <figure class="fig-corners-soft photos-zoom photos-brightness">
+                <a href="#"><img src="../../static/app/images/chat.png" alt="Placeholder image" width="500" height="600"></a>
+            </figure>
+            <h3>Puss in boots</h3>
+            <p>Cat</p>
+        </div>
+
+        <div class="col-4">
+            <figure class="fig-corners-soft photos-zoom photos-brightness">
+                <a href="#"><img src="../../static/app/images/dingo.png" alt="Placeholder image" width="500" height="600"></a>
+            </figure>
+            <h3>Dingo</h3>
+            <p>Dog</p>
+        </div>
+
+        <div class="col-4">
+            <figure class="fig-corners-soft photos-zoom photos-brightness">
+                <a href="#"><img src="../../static/app/images/mickey.png" alt="Placeholder image" width="500" height="600"></a>
+            </figure>
+            <h3>Mickey</h3>	
+            <p>Mouse</p>
+        </div>
+
+        <div class="col-4">
+            <figure class="fig-corners-soft photos-zoom photos-brightness">
+                <a href="#"><img src="../../static/app/images/simba.png" alt="Placeholder image" width="500" height="600"></a>
+            </figure>
+            <h3>Simba</h3>
+            <p>Lion</p>
+        </div>
+    </div>
+    <!-- End four-column flexbox grid -->
+    </section>
+    <!-- section ends here -->
+    <section>
+        {% if latest_animal_list %}
+        <ul>
+            {% for animal in latest_animal_list %}
+            <li><a href="{% url 'app:edit' animal.id %}">{{ animal.name}}</a></li>
+            {% endfor %}
+        </ul>
+        {% else %}
+            <p>No animals are available.</p>
+        {% endif %}
+</section>
+            {% for animal in latest_animal_list %}
+                    <!-- Generate the link build with the pattern : url/element.id
+                         for each element of the database-->
+                <a class="linkbutton" href="{% url 'app:edit' animal.id %}">
+                    <div class="linkbuttonclick">
+                        <div class="responsivelinkbutton">
+                            <!-- Show element's name and mail -->
+                            <h2 class="infobutton">{{ animal.name }}</h2>
+                            <h2 class="infobutton">{{ animal.species }}</h2>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+    
+
+	<!-- section starts here -->
+
+    <section class="theme-light section-selector-1 w-820px text-center-desktop text-center-mobile">
+
+        <p class="bigger-desktop bigger-mobile">
+            Adopting a pet from the RSPCA can be one of the most fulfilling experiences in your life. Not only are you giving a loving home to a pet in need, but you are also saving a life. The RSPCA takes in animals that have been abandoned, neglected, or mistreated, and provides them with the care they need to recover and find a new home.
+        </p>
+
+    </section>
+
+	<!-- section ends here -->
+    </main>
+</body>
+</html>
