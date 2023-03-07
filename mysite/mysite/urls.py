@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.views.generic.base import TemplateView
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -27,9 +28,11 @@ The urls.py file defines the different urls that are available in the app
     * app: The app page of the app (the page that allows the user to use the app)
 """
 urlpatterns = [
-    path('', include('app.urls')),
     path('admin/', admin.site.urls),
-
+    path('accounts/', include('django.contrib.auth.urls')),
+    path("accounts/", include("accounts.urls")),
+    #path('', include('app.urls')),
+    path('', TemplateView.as_view(template_name='home.html'), name='home'),
 ]
 """
 The static() helper function allows you to serve static files during development
