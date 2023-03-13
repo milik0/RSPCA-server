@@ -58,7 +58,7 @@ python3 manage.py runserver
 ## Usage
 - Open your web browser and go to http://localhost:8000/.
 
-- User authentication: You can create accounts and log in.
+- You can create accounts and log in the authentification page.
 
 - A reset password feature is available in case you forgot your password.
 
