@@ -56,7 +56,13 @@ python3 manage.py runserver
 ```
 
 ## Usage
-- Open your web browser and go to http://localhost:8000/. You will find the following web page.
+- Open your web browser and go to http://localhost:8000/.
+
+- User authentication: You can create accounts and log in.
+
+- A reset password feature is available in case you forgot your password.
+
+- Once signed up or logged in you will find the following web page.
 ![Alt text](./mysite/app/static/app/images/home_page.png "Home Page")
 
 - You can add the animals that you rescued by clicking on the "Add Animal" button.
@@ -64,11 +70,4 @@ python3 manage.py runserver
 - You can view, edit, and delete the animals that you added by clicking on them on the list below.
 ![Alt text](./mysite/app/static/app/images/view_list.png "Home Page")
 
-
 - People who want to adopt the animals can view them by clicking on the "Adopt" link.
-
-
-
-
-
-
