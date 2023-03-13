@@ -20,5 +20,7 @@ urlpatterns = [
     #path('<int:animal_id>/choose/', views.choose, name='choose')
 ]
 
-
+"""
+The following line is used to serve the media files (images) in development mode
+"""
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
