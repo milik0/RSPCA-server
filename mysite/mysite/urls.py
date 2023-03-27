@@ -25,11 +25,12 @@ admin.site.site_header = 'Check Website'
 """
 The urls.py file defines the different urls that are available in the app
     * admin: The admin page of the app (the page that allows the user to manage the app)
+    * accounts: The accounts page of the app (the page that allows the user to manage their account)
     * app: The app page of the app (the page that allows the user to use the app)
     * accounts: The accounts page of the app (the page that allows the user to manage their account)
 """
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('yourarenotgettingintotheadminpage/', admin.site.urls), # The admin url is not the default one to prevent people from accessing it
     path('accounts/', include('django.contrib.auth.urls')),
     path("accounts/", include("accounts.urls")),
     path('', include('app.urls'), name='info'),
